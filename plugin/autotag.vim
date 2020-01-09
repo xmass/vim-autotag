@@ -33,7 +33,7 @@ if has("python") || has("python3")
       if exists("b:netrw_method")
          return
       endif
-      if has("python")
+      if has("python") && !g:autotag_prefer_python3
          python  autotag()
       else
          python3 autotag()
