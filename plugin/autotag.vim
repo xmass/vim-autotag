@@ -18,7 +18,7 @@ let g:autotag_vim_version_sourced=s:autotag_vim_version
 " just saved, removes all entries for that source file and *then* runs ctags -a
 
 if has("python") || has("python3")
-   if has("python")
+   if has("python") && !g:autotag_prefer_python3
       python  import sys, os, vim
       python  sys.path.insert(0, os.path.dirname(vim.eval('expand("<sfile>")')))
       python  from __future__ import print_function
